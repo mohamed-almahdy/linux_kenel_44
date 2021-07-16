@@ -1,0 +1,30 @@
+diff --git a/arch/arm/boot/dts/at91sam9x5cm.dtsi b/arch/arm/boot/dts/at91sam9x5cm.dtsi
+index 8901042..7ae28e3 100644
+--- a/arch/arm/boot/dts/at91sam9x5cm.dtsi
++++ b/arch/arm/boot/dts/at91sam9x5cm.dtsi
+@@ -76,9 +76,9 @@
+ 	leds {
+ 		compatible = "gpio-leds";
+ 
+-		pb18 {
+-			label = "pb18";
+-			gpios = <&pioB 18 GPIO_ACTIVE_LOW>;
++		pb8 {
++			label = "pb8";
++			gpios = <&pioB 8 GPIO_ACTIVE_LOW>;
+ 			linux,default-trigger = "heartbeat";
+ 		};
+ 
+diff --git a/arch/arm/boot/dts/at91sam9x5ek.dtsi b/arch/arm/boot/dts/at91sam9x5ek.dtsi
+index 8901042..7ae28e3 100644
+--- a/arch/arm/boot/dts/at91sam9x5ek.dtsi
++++ b/arch/arm/boot/dts/at91sam9x5ek.dtsi
+@@ -13,7 +13,7 @@
+ 	compatible = "atmel,at91sam9x5ek", "atmel,at91sam9x5", "atmel,at91sam9";
+ 
+ 	chosen {
+-		bootargs = "root=/dev/mtdblock1 rw rootfstype=ubifs ubi.mtd=1 root=ubi0:rootfs";
++		bootargs = "root=/dev/mtdblock7 rw rootfstype=ubifs ubi.mtd=7";
+ 		stdout-path = "serial0:115200n8";
+ 	};
+ 
