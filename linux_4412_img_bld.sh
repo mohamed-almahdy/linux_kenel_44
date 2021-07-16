@@ -11,7 +11,9 @@ patch -p1 < ./../boot_status_led.patch
 #auto detection of amount of threads to use
 JOBS="-j$(($(nproc --all) + 1))"
 #make config file for needed target
-make ARCH=arm CROSS_COMPILE=/opt/build-tools-gcc/arm-linux-gnueabi/bin/arm-linux-gnueabi- at91_dt_defconfig
+#make ARCH=arm CROSS_COMPILE=/opt/build-tools-gcc/arm-linux-gnueabi/bin/arm-linux-gnueabi- at91_dt_defconfig
+#copy needed config file to linux kernel source
+cp ./../config_kernel ./.config
 #make dtb file
 make ARCH=arm CROSS_COMPILE=/opt/build-tools-gcc/arm-linux-gnueabi/bin/arm-linux-gnueabi- at91sam9g25ek.dtb
 #build the kernel image
@@ -26,3 +28,5 @@ cp linux-4.4.12/arch/arm/boot/zImage zImage
 #cp linux-4.4.12/uImage uImage
 #copy the kernel dtb file to root directory
 cp linux-4.4.12/arch/arm/boot/dts/at91sam9g25ek.dtb at91sam9g25ek.dtb
+#delete kernel 4.4.12-rt19 source folder
+rm -rf linux-4.4.12/
