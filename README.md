@@ -8,3 +8,6 @@ https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/4.4/older/patch-4.4
 
 File System Image (rootfs) source url:
 http://www.armdevs.com/note/note293.html
+
+EM SOM Schematic url:
+https://www.acmesystems.it/download/schematics/ariag25_schematic.pdf
